@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #5fcf80;
+  background: #00639e;
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -49,7 +49,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 0;
 }
 .back-to-top:hover {
-  background: #7ed899;
+  background: #ff3e3f;
   color: #fff;
 }
 .back-to-top.active {
@@ -554,6 +554,9 @@ section {
   list-style: none;
   padding: 0;
 }
+.about a {
+  color: #00639e;
+}
 .about .content ul li {
   padding-bottom: 10px;
 }
@@ -685,16 +688,18 @@ section {
   padding: 0;
   line-height: 1;
   font-size: 16px;
+  /* esto lo agregue yo */
+  text-align: center;
 }
 .features .icon-box h3 a {
   color: #37423b;
   transition: 0.3s;
 }
 .features .icon-box:hover {
-  border-color: #5fcf80;
+  border-color:  #00639e;
 }
 .features .icon-box:hover h3 a {
-  color: #5fcf80;
+  color: #00639e;
 }
 
 /*--------------------------------------------------------------
@@ -716,7 +721,7 @@ section {
   transition: 0.3s;
 }
 .courses .course-content h3 a:hover {
-  color: #5fcf80;
+  color: #00639e;
 }
 .courses .course-content p {
   font-size: 14px;
@@ -724,7 +729,7 @@ section {
 }
 .courses .course-content h4 {
   font-size: 14px;
-  background: #5fcf80;
+  background: #00639e;
   padding: 7px 14px;
   color: #fff;
   margin: 0;
@@ -1322,7 +1327,7 @@ section {
 }
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: #5fcf80;
+  color: #00639e;
   font-size: 18px;
   line-height: 1;
 }
@@ -1342,7 +1347,7 @@ section {
 }
 #footer .footer-top .footer-links ul a:hover {
   text-decoration: none;
-  color: #5fcf80;
+  color:  #ff3e3f;
 }
 #footer .footer-newsletter {
   font-size: 15px;
@@ -1391,16 +1396,30 @@ section {
   font-size: 13px;
 }
 #footer .credits a {
-  color: #3ac162;
+  color: #00639e;
   transition: 0.3s;
 }
 #footer .credits a:hover {
-  color: #5fcf80;
+  color:  #ff3e3f;
 }
+
+footer .copyright {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color:#00639e;
+}
+
+#footer .copyright a {
+  color:#00639e;
+}
+
+
+
 #footer .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #5fcf80;
+  background:  #00639e;
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -1412,7 +1431,7 @@ section {
   transition: 0.3s;
 }
 #footer .social-links a:hover {
-  background: #3ac162;
+  background: #ff3e3f;
   color: #fff;
   text-decoration: none;
 }
