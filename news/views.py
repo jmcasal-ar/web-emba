@@ -6,6 +6,7 @@ from .models import News, CategoryNews, TagNews
 class NewsListView(ListView):
     model = News
     template_name = 'news/news_list.html'
+    paginate_by = 3
 
 class NewsDetailView(DetailView):
     model = News
