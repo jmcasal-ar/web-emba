@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from news.urls import news_patterns
 from carreras.urls import carreras_patterns
+from pages.urls import pages_patterns
 from django.conf import settings
 
 urlpatterns = [
@@ -27,6 +28,8 @@ urlpatterns = [
     path('news/', include(news_patterns)),
     # Path de carreras
     path('carreras/', include(carreras_patterns)),
+    #Pat de paginas
+    path('pages/', include(pages_patterns)),
 ]
 
 if settings.DEBUG:

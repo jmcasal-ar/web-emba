@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'core',
     'news',
     'carreras',
+    'pages',
     'ckeditor'
 ]
 

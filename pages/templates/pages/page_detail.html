@@ -1,0 +1,42 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+
+  <main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs" data-aos="fade-in">
+      <div class="container">
+        <h2>Institucional</h2>
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="centrarImg">
+            {%if page.imagePage.url != null %}
+            <img src="{{ page.imagePage.url }}" class="img-fluid" alt="">
+            {%endif%}
+          </div>
+          {% comment %} <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            {%if carrera.imageCarrera.url != null %}
+            <img src="{{ carrera.imageCarrera.url }}" class="img-fluid" alt="">
+            {%endif%}
+          </div> {% endcomment %}
+          <div class="content course-details">
+            <h3 style="color: {{carrera.color}}" >{{page.title}}</h3>
+            <p>
+              {{object.content|safe}}
+            </p>
+          </div>
+        </div>
+        
+      </div>
+    </section><!-- End About Section -->
+
+
+
+  </main><!-- End #main -->
+  {% endblock %}
