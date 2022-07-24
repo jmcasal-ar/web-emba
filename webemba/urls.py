@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from news.urls import news_patterns
+from carreras.urls import carreras_patterns
 from django.conf import settings
 
 urlpatterns = [
@@ -24,6 +25,8 @@ urlpatterns = [
     path('', include('core.urls')),
     # Path de news
     path('news/', include(news_patterns)),
+    # Path de carreras
+    path('carreras/', include(carreras_patterns)),
 ]
 
 if settings.DEBUG:
