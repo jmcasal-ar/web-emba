@@ -11,7 +11,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{% static 'core/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'core/img/emba80_logo.png' %}" rel="icon">
   <link href="{% static 'core/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -68,13 +68,13 @@
       <div class="container d-flex align-items-center">
         <!-- <h1 class="logo me-auto"><a href="index.html">Mentor</a></h1> -->
         <!-- Uncomment below if you prefer to use an image logo -->
-        <a href="index.html" class="logo me-auto"><img src="{% static 'core/img/emba80_logo.png' %}" alt="" class="img-fluid"></a>
+        <a href="{% url 'home' %}" class="logo me-auto"><img src="{% static 'core/img/emba80_logo.png' %}" alt="" class="img-fluid"></a>
   
         <nav id="navbar" class="navbar order-last order-lg-0">
           <ul>
             <li class="dropdown"><a href="#"><span>Institucional</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
-                <li><a href="#">Datos Institucionales</a></li>
+                <li><a href="{% url 'pages:page' '1' 'datos-institucionales' %}">Datos Institucionales</a></li>
                 <li><a href="#">Historia</a></li>
                 <li><a href="#">Autoridades</a></li>
                 <li><a href="#">Marco Normativo</a></li>
@@ -90,7 +90,7 @@
             </li>
             <li class="dropdown"><a href="#"><span>Carreras</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
-                <li><a href="#">Profesorado Artes Visuales</a></li>
+                <li><a href="{% url 'carreras:carrera' '1' 'profesorado-artes-visuales' %}">Profesorado Artes Visuales</a></li>
                 <li><a href="#">Profesorado Cerámica</a></li>
                 <li><a href="#">Tecnicatura Diseño Gráfico</a></li>
                 <li><a href="#">Tecnicatura Ilustración</a></li>

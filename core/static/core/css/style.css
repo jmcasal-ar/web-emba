@@ -401,6 +401,14 @@ h1, h2, h3, h4, h5, h6 {
 /* .carousel-inner{
   max-height: 600px !important;
 } */
+@media (max-width: 768px) {
+  .carousel-item img {
+    min-height: 40vh;
+    object-fit: cover;
+    object-position: 35% 0%;
+    
+  }
+}
 
 /*--------------------------------------------------------------
 # Hero Section
@@ -556,6 +564,9 @@ section {
 }
 .about a {
   color: #00639e;
+}
+.about th, td {
+  border: 1px solid;
 }
 .about .content ul li {
   padding-bottom: 10px;
