@@ -19,7 +19,9 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="centrarImg">
-              <img src="{{ news.imageNews.url }}" class="img-fluid" alt="">
+              <img src="{% if news.imageNews.url != null %}
+              {{ news.imageNews.url }}
+              {% endif %}" class="img-fluid" alt="">
             </div>
             <h3>{{news.title}}</h3>
             <p>

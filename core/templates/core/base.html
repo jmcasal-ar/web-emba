@@ -11,8 +11,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{% static 'core/img/emba80_logo.png' %}" rel="icon">
-  <link href="{% static 'core/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  <link href="{% static 'core/img/FAVICON LOGO EMBA-01.png' %}" rel="icon">
+  <link href="{% static 'core/img/FAVICON LOGO EMBA-01.png' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -29,12 +29,15 @@
   <!-- Template Main CSS File -->
   <link href="{% static 'core/css/style.css' %}" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Mentor - v4.7.0
-  * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-91R0ZL72QX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-91R0ZL72QX');
+    </script>
 </head>
 
 <body>
@@ -45,20 +48,11 @@
       </div>
          Escuela Municipal de Bellas Artes Carlos Morel
     </div>
-    <!-- ======= Redes sociales ======= -->
-    <!-- <div id="redes">
-      <ul class="social-icons">
-        <li><a href="" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
-        <li><a href="" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
-        <li><a href="" class="social-icon"> <i class="fa fa-instagram"></i></a></li>
-        <li><a href="" class="social-icon"> <i class="fa fa-youtube"></i></a></li>
-      </ul>
-    </div> -->
     <div id="menuRedes">
       <div class="social-links text-end text-md-right pt-3 pt-md-0">
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="https://www.facebook.com/Escuela-Municipal-de-Bellas-Artes-Carlos-Morel-EMBA-113077477133346" class="facebook"><i class="bx bxl-facebook"></i></a>
         <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://www.instagram.com/embaquilmes/?hl=es" class="instagram"><i class="bx bxl-instagram"></i></a>
         <a href="#" class="youtube"><i class="bx bxl-youtube"></i></a>
       </div>
     </div>
@@ -75,68 +69,69 @@
             <li class="dropdown"><a href="#"><span>Institucional</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
                 <li><a href="{% url 'pages:page' '1' 'datos-institucionales' %}">Datos Institucionales</a></li>
-                <li><a href="#">Historia</a></li>
-                <li><a href="#">Autoridades</a></li>
-                <li><a href="#">Marco Normativo</a></li>
-                <li><a href="#">Informes de Gestión</a></li>
-                <li><a href="#">Secretaría</a></li>
-                <li><a href="#">Administración</a></li>
-                <li><a href="#">Equipo de Preceptores</a></li>
-                <li><a href="#">Centro de Estudiantes</a></li>
-                <li><a href="#">Biblioteca</a></li>
-                <li><a href="#">Galería Virtual Carlos Morel</a></li>
-                <li><a href="#">Visitas guiadas pedagógicas</a></li>
+                <li><a href="{% url 'pages:page' '2' 'Historia' %}">Historia</a></li>
+                <li><a href="{% url 'pages:page' '3' 'Autoridades' %}">Autoridades</a></li>
+                <li><a href="{% url 'pages:page' '4' 'Marco-Normativo' %}">Marco Normativo</a></li>
+                <li><a href="{% url 'pages:page' '5' 'Informes-de-Gestion' %}">Informes de Gestión</a></li>
+                <li><a href="{% url 'pages:page' '6' 'Secretaria' %}">Secretaría</a></li>
+                <li><a href="{% url 'pages:page' '7' 'Administracion' %}">Administración</a></li>
+                <li><a href="{% url 'pages:page' '8' 'Equipo-de-Preceptores' %}">Equipo de Preceptores</a></li>
+                <li><a href="{% url 'pages:page' '9' 'Centro-de-Estudiantes' %}">Centro de Estudiantes</a></li>
+                <li><a href="{% url 'pages:page' '10' 'Biblioteca' %}">Biblioteca</a></li>
+                <li><a href="{% url 'pages:page' '11' 'Galeria-Virtual-Carlos-Morel' %}">Galería Virtual Carlos Morel</a></li>
+                <li><a href="{% url 'pages:page' '12' 'Visitas-guiadas-pedagogicas' %}">Visitas guiadas pedagógicas</a></li>
               </ul>
             </li>
             <li class="dropdown"><a href="#"><span>Carreras</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
+                <li><a href="{% url 'carreras:carreras_list' %}">Mapa de Carreras</a></li>
                 <li><a href="{% url 'carreras:carrera' '1' 'profesorado-artes-visuales' %}">Profesorado Artes Visuales</a></li>
-                <li><a href="#">Profesorado Cerámica</a></li>
-                <li><a href="#">Tecnicatura Diseño Gráfico</a></li>
-                <li><a href="#">Tecnicatura Ilustración</a></li>
-                <li><a href="#">Profesorado en Educación Musical</a></li>
-                <li><a href="#">Profesorado en Instrumentos</a></li>
-                <li><a href="#">Profesorado en Canto Lírico</a></li>
-                <li><a href="#">Tecnicatura en Capacitación Vocal</a></li>
-                <li><a href="#">Tecnicatura en Capacitación Instrumental</a></li>
-                <li><a href="#">Profesorado en Danzas Folklóricas</a></li>
-                <li><a href="#">Tecnicatura en Actuación Teatral</a></li>
+                <li><a href="{% url 'carreras:carrera' '2' 'profesorado-ceramica' %}">Profesorado Cerámica</a></li>
+                <li><a href="{% url 'carreras:carrera' '3' 'tecnicatura-disenio-grafico' %}">Tecnicatura Diseño Gráfico</a></li>
+                <li><a href="{% url 'carreras:carrera' '4' 'tecnicatura-ilustracion' %}">Tecnicatura Ilustración</a></li>
+                <li><a href="{% url 'carreras:carrera' '5' 'profesorado-educacion-musical' %}">Profesorado en Educación Musical</a></li>
+                <li><a href="{% url 'carreras:carrera' '6' 'profesorado-instrumentos' %}">Profesorado en Instrumentos</a></li>
+                <li><a href="{% url 'carreras:carrera' '7' 'profesorado-canto-lirico' %}">Profesorado en Canto Lírico</a></li>
+                <li><a href="{% url 'carreras:carrera' '8' 'tecnicatura-capacitacion-vocal' %}">Tecnicatura en Capacitación Vocal</a></li>
+                <li><a href="{% url 'carreras:carrera' '9' 'tecnicatura-capacitacion-instrumental' %}">Tecnicatura en Capacitación Instrumental</a></li>
+                <li><a href="{% url 'carreras:carrera' '10' 'profesorado-danzas-folkloricas' %}">Profesorado en Danzas Folklóricas</a></li>
+                <li><a href="{% url 'carreras:carrera' '11' 'tecnicatura-actuacion-teatral' %}">Tecnicatura en Actuación Teatral</a></li>
               </ul>
             </li>
             <li class="dropdown"><a href="#"><span>Estudiantes</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
-                <li><a href="#">Campus Virtual</a></li>
-                <li><a href="#">Siu Guaraní</a></li>
-                <li><a href="#">Calendario Académico</a></li>
-                <li><a href="#">Horarios</a></li>
-                <li><a href="#">Aulas</a></li>
-                <li><a href="#">Becas Progresar</a></li>
-                <li><a href="#">Trámites de Equivalencias</a></li>
-                <li><a href="#">Preguntas Frecuentes</a></li>
+                <li><a href="{% url 'pages:page' '13' 'Campus-Virtual' %}">Campus Virtual</a></li>
+                <li><a href="{% url 'pages:page' '14' 'Siu-Guarani' %}">Siu Guaraní</a></li>
+                <li><a href="{% url 'pages:page' '15' 'Calendario-Academico' %}">Calendario Académico</a></li>
+                <li><a href="{% url 'pages:page' '16' 'Horarios' %}">Horarios</a></li>
+                <li><a href="{% url 'pages:page' '17' 'Aulas' %}">Aulas</a></li>
+                <li><a href="{% url 'pages:page' '18' 'Becas-Progresar' %}">Becas Progresar</a></li>
+                <li><a href="{% url 'pages:page' '19' 'Tramites-de-Equivalencias' %}">Trámites de Equivalencias</a></li>
+                <li><a href="{% url 'pages:page' '20' 'Preguntas-Frecuentes' %}">Preguntas Frecuentes</a></li>
               </ul>
             </li>
-            <li class="dropdown"><a href="#"><span>Arte Infantil y Juvenil</span> <i class="bi bi-chevron-down"></i></a>
+            <li class="dropdown"><a href="#"><span>Arte Infantil, Juvenil y en Silencio</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
-                <li><a href="#">Autoridades</a></li>
-                <li><a href="#">Historia</a></li>
-                <li><a href="#">Normativa</a></li>
-                <li><a href="#">Talleres</a></li>
-                <li><a href="#">Inscripción</a></li>
+                <li><a href="{% url 'pages:page' '21' 'Autoridades' %}">Autoridades</a></li>
+                <li><a href="{% url 'pages:page' '22' 'Historia' %}">Historia</a></li>
+                <li><a href="{% url 'pages:page' '23' 'Normativa' %}">Normativa</a></li>
+                <li><a href="{% url 'pages:page' '24' 'Talleres' %}">Talleres</a></li>
+                <li><a href="{% url 'pages:page' '25' 'Inscripcion' %}">Inscripción</a></li>
               </ul>
             </li>
             <li class="dropdown"><a href="#"><span>Extensión Cultural</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
-                <li><a href="#">Autoridades</a></li>
-                <li><a href="#">Historia</a></li>
-                <li><a href="#">Normativa</a></li>
-                <li><a href="#">Actividades</a></li>
+                <li><a href="{% url 'pages:page' '26' 'Autoridades' %}">Autoridades</a></li>
+                <li><a href="{% url 'pages:page' '27' 'Historia' %}">Historia</a></li>
+                <li><a href="{% url 'pages:page' '28' 'Normativa' %}">Normativa</a></li>
+                <li><a href="{% url 'pages:page' '29' 'Actividades' %}">Actividades</a></li>
               </ul>
             </li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
   
-        <a href="courses.html" class="get-started-btn">Ingreso</a>
+        <a href="{% url 'pages:page' '30' 'Ingreso' %}" class="get-started-btn">Ingreso</a>
   
       </div>
     </header><!-- End Header -->
@@ -157,9 +152,9 @@
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="https://www.facebook.com/Escuela-Municipal-de-Bellas-Artes-Carlos-Morel-EMBA-113077477133346" class="facebook"><i class="bx bxl-facebook"></i></a>
         <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://www.instagram.com/embaquilmes/?hl=es" class="instagram"><i class="bx bxl-instagram"></i></a>
         <a href="#" class="youtube"><i class="bx bxl-youtube"></i></a>
       </div>
     </div>

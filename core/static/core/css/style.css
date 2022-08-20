@@ -156,7 +156,7 @@ h1, h2, h3, h4, h5, h6 {
 #logoMunicipio{ 
   float:left;
   width: 200px;
-  background: url(/assets/img/logo_quilmes2.png) no-repeat 0 0
+  
 }
 
 /** Menú Redes
@@ -405,7 +405,7 @@ h1, h2, h3, h4, h5, h6 {
   .carousel-item img {
     min-height: 40vh;
     object-fit: cover;
-    object-position: 35% 0%;
+    object-position: 50% 0%;
     
   }
 }
@@ -551,6 +551,39 @@ section {
   margin-bottom: 0;
 }
 
+.breadcrumscarrera {
+  margin-top: 40px;
+  padding: 30px 0;
+}
+@media (max-width: 992px) {
+  .breadcrumbs {
+    margin-top: 40px;
+  }
+}
+
+.breadcrumscarrera p {
+  font-size: 15px;
+  line-height: 18px;
+}
+.colcarrera {
+  padding-top: 1em;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.btnPlanCarrera {
+  color: #444444;
+}
+.btnPlanCarrera:hover {
+  color: #00639e;
+}
+.btnRegimenCarrera {
+  background-color: #00639e;
+  color: #fff;
+  padding: 0em 1em;
+}
+.btnRegimenCarrera:hover {
+  color: #fff;
+}
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
@@ -1213,95 +1246,6 @@ section {
 .contact .info .email, .contact .info .phone {
   margin-top: 40px;
 }
-.contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
-  background: #5fcf80;
-  color: #fff;
-}
-.contact .php-email-form {
-  width: 100%;
-  background: #fff;
-}
-.contact .php-email-form .form-group {
-  padding-bottom: 8px;
-}
-.contact .php-email-form .error-message {
-  display: none;
-  color: #fff;
-  background: #ed3c0d;
-  text-align: left;
-  padding: 15px;
-  font-weight: 600;
-}
-.contact .php-email-form .error-message br + br {
-  margin-top: 25px;
-}
-.contact .php-email-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #18d26e;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-.contact .php-email-form .loading {
-  display: none;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-}
-.contact .php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
-  border-top-color: #eee;
-  -webkit-animation: animate-loading 1s linear infinite;
-  animation: animate-loading 1s linear infinite;
-}
-.contact .php-email-form input, .contact .php-email-form textarea {
-  border-radius: 4px;
-  box-shadow: none;
-  font-size: 14px;
-}
-.contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
-  border-color: #5fcf80;
-}
-.contact .php-email-form input {
-  height: 44px;
-}
-.contact .php-email-form textarea {
-  padding: 10px 12px;
-}
-.contact .php-email-form button[type=submit] {
-  background: #5fcf80;
-  border: 0;
-  padding: 10px 35px;
-  color: #fff;
-  transition: 0.4s;
-  border-radius: 50px;
-}
-.contact .php-email-form button[type=submit]:hover {
-  background: #3ac162;
-}
-@-webkit-keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 
 /*--------------------------------------------------------------
 # Footer
@@ -1371,48 +1315,7 @@ section {
   text-decoration: none;
   color:  #ff3e3f;
 }
-#footer .footer-newsletter {
-  font-size: 15px;
-}
-#footer .footer-newsletter h4 {
-  font-size: 16px;
-  font-weight: bold;
-  color: #444444;
-  position: relative;
-  padding-bottom: 12px;
-}
-#footer .footer-newsletter form {
-  margin-top: 30px;
-  background: #fff;
-  padding: 6px 10px;
-  position: relative;
-  border-radius: 50px;
-  text-align: left;
-  border: 1px solid #e0e5e2;
-}
-#footer .footer-newsletter form input[type=email] {
-  border: 0;
-  padding: 4px 8px;
-  width: calc(100% - 100px);
-}
-#footer .footer-newsletter form input[type=submit] {
-  position: absolute;
-  top: -1px;
-  right: -1px;
-  bottom: -1px;
-  border: 0;
-  background: none;
-  font-size: 16px;
-  padding: 0 20px 2px 20px;
-  background: #5fcf80;
-  color: #fff;
-  transition: 0.3s;
-  border-radius: 50px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-}
-#footer .footer-newsletter form input[type=submit]:hover {
-  background: #3ac162;
-}
+
 #footer .credits {
   padding-top: 5px;
   font-size: 13px;

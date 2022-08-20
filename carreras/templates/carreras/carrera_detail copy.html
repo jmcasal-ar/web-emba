@@ -2,23 +2,47 @@
 {% load static %}
 {% block content %}
 
-  <main id="main" data-aos="fade-in">
-
+  <main id="main">
     <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs">
+    <div style="background-color: {{carrera.color}};" class="breadcrumbs" data-aos="fade-in">
       <div class="container">
-        <h2>Noticias</h2>
+        <h2>Carreras</h2>
       </div>
     </div><!-- End Breadcrumbs -->
 
-    <!-- ======= Courses Section ======= -->
-    <section id="courses" class="courses">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
       <div class="container" data-aos="fade-up">
 
+        <div class="row">
+          <div class="centrarImg">
+            {%if carrera.imageCarrera.url != null %}
+              <img src="{{ carrera.imageCarrera.url }}" class="img-fluid" alt="">
+            {%endif%}
+          </div>
+          <div class="content course-details">
+            <h3 style="color: {{carrera.color}}" >{{carrera.name}}</h3>
+            <p>
+              {{object.content|safe}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section><!-- End About Section -->
+
+    <section id="courses" class="courses">
+      <div class="container" data-aos="fade-up">
+        <div class="content course-details">
+          <h3 style="color: {{carrera.color}}" >Noticias de {{ carrera.areaCarrera.first.name }}</h3>
+        </div>
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
           {% comment %} {% load news_extras %}
           {% get_news_list as news_list %} {% endcomment %}
-          {% for news in news_list %}
+          {% load news_extras %}
+          {% get_news_list as news_list %}
+          {% get_news_area_list as news_area_list %}
+          {% for news in news_list|slice:3 %}
+          {% if news.areaNews.first.name == carrera.areaCarrera.first.name %}
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="course-item">
               <img src="{% if news.imageNews.url != null %}
@@ -26,26 +50,15 @@
               {% endif %}" class="img-fluid" alt="...">
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4>{{ news.categoriesNews.first.name }}</h4>
+                  <h4 style="background-color: {{carrera.color}}">{{ news.categoriesNews.first.name }}</h4>
                   <!-- <p class="price">$169</p> -->
                 </div>
-
                 <h3><a href="{% url 'news:news' news.id news.title|slugify %}">{{news.title}}</a></h3>
-                <!-- <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
-                <div class="trainer d-flex justify-content-between align-items-center">
-                  <div class="trainer-profile d-flex align-items-center">
-                    <img src="assets/img/trainers/trainer-1.jpg" class="img-fluid" alt="">
-                    <span>Antonio</span>
-                  </div>
-                  <div class="trainer-rank d-flex align-items-center">
-                    <i class="bx bx-user"></i>&nbsp;50
-                    &nbsp;&nbsp;
-                    <i class="bx bx-heart"></i>&nbsp;65
-                  </div>
-                </div> -->
               </div>
             </div>
           </div> <!-- End Course Item-->
+          {{ news_area_list.count }}
+          {% endif %}
           {% endfor %}
           <div class="separador">
             <br>
@@ -63,7 +76,8 @@
       <br>
     </div>
   <!-- Menú de paginación -->
-  {% if is_paginated %}
+  
+  {% if news_list.count == 5 %}
   <!--is_paginated es para indicar que lo hace solo si hay mas numeros de instancias q permitan paginar-->
     <nav aria-label="Page navigation">
       <ul class="pagination justify-content-center">
@@ -98,6 +112,7 @@
     </nav>
   {% endif %}
 
-  </main><!-- End #main -->
 
+
+  </main><!-- End #main -->
   {% endblock %}

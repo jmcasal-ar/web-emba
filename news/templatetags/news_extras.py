@@ -7,7 +7,7 @@ register = template.Library()
 #Creamos metodo para obtener todas las paginas. El @ es un decorador para registrar nuestra funcion como simple tag
 @register.simple_tag
 def get_news_list():
-    news = News.objects.all()
+    news = News.objects.all().order_by('-published')
     return news
 
 @register.simple_tag
@@ -19,3 +19,9 @@ def get_categories_list():
 def get_tags_list():
     tags = TagNews.objects.all()
     return tags
+
+
+@register.simple_tag
+def get_news_area_list():
+    news_area = ([])
+    return news_area

@@ -19,10 +19,15 @@ class Area(models.Model):
 
 class Carrera(models.Model):
     name = models.CharField(max_length=200, verbose_name="Título")
-    subtitle = models.CharField(max_length=200, verbose_name="Subtítulo")
-    content = RichTextField(verbose_name="Contenido")
+    subtitle = models.CharField(max_length=200, verbose_name="Subtítulo", null=True, blank=True)
+    content = RichTextField(verbose_name="Contenido", null=True, blank=True)
+    turnos = RichTextField(verbose_name="Turnos", null=True, blank=True)
+    planMaterias=models.CharField(max_length=200, verbose_name="Título Plan de Estudio", null=True, blank=True)
+    linkPlanMaterias=models.CharField(max_length=200, verbose_name="Link Plan de Estudio", null=True, blank=True)
+    linkRegimenCursada=models.CharField(max_length=200, verbose_name="Link Régimen de Cursada", null=True, blank=True)
     published = models.DateTimeField(verbose_name="Fecha de Publicación", default=timezone.now)
     imageCarrera = models.ImageField(verbose_name="Imagen", upload_to="carreras", null=True, blank=True)
+    bannerCarrera = models.ImageField(verbose_name="Banner de Carrera", upload_to="carreras", null=True, blank=True)
     color = models.CharField(max_length=10, verbose_name="Color")
     #Enlazar con Foreign Key en cascada
     areaCarrera = models.ForeignKey(Area, verbose_name="Área", related_name="get_areas", on_delete=models.CASCADE)

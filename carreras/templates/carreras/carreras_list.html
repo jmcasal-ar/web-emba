@@ -7,10 +7,20 @@
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs">
       <div class="container">
-        <h2>Carreras</h2>
+        <h2>Mapa de Carreras</h2>
       </div>
     </div><!-- End Breadcrumbs -->
 
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="centrarImg">
+              <img src="{% static 'core/img/mapacarreras.jpg' %}" class="img-fluid" alt="">
+          </div>
+        </div>
+      </div>
+    </section><!-- End About Section -->
     <!-- ======= Courses Section ======= -->
     <section id="courses" class="courses">
       <div class="container" data-aos="fade-up">
@@ -21,7 +31,9 @@
           {% for carrera in carrera_list %}
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="course-item">
-              <img src="{{ carrera.imageCarrera.url }}" class="img-fluid" alt="...">
+              {%if carrera.imageCarrera.url != null %}
+                <img src="{{ carrera.imageCarrera.url }}" class="img-fluid" alt="">
+              {%endif%}
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                   <h4 style="background-color: {{carrera.color}}">{{ carrera.areaCarrera.name }}</h4>

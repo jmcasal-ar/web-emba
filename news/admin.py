@@ -1,11 +1,14 @@
 from django.contrib import admin
-from .models import News, CategoryNews, TagNews
+from .models import News, CategoryNews, TagNews, AreaNews
 
 # Register your models here.
 class TagAdmin(admin.ModelAdmin):
     readonly_fields = ('created', 'updated')
 
 class CategoryAdmin(admin.ModelAdmin):
+    readonly_fields = ('created', 'updated')
+
+class AreaNewsAdmin(admin.ModelAdmin):
     readonly_fields = ('created', 'updated')
 
 
@@ -25,3 +28,4 @@ class NewsAdmin(admin.ModelAdmin):
 admin.site.register(TagNews, TagAdmin)
 admin.site.register(CategoryNews, CategoryAdmin)
 admin.site.register(News, NewsAdmin)
+admin.site.register(AreaNews, AreaNewsAdmin)
